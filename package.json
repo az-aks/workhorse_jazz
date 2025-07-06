@@ -5,6 +5,8 @@
   "version": "2.0.2",
   "scripts": {
     "start": "ts-node index.ts",
+    "paper-trade": "ts-node paper-trading.ts",
+    "validate-env": "node validate-env.js",
     "tsc": "tsc --noEmit"
   },
   "dependencies": {

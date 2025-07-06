@@ -51,9 +51,13 @@ export class Listeners extends EventEmitter {
   }
 
   private async subscribeToRaydiumPools(config: { quoteToken: Token }) {
+    console.log(`🔍 Subscribing to Raydium pools for ${config.quoteToken.symbol}...`);
+    console.log(`📡 Quote mint: ${config.quoteToken.mint.toBase58()}`);
+    
     return this.connection.onProgramAccountChange(
       MAINNET_PROGRAM_ID.AmmV4,
       async (updatedAccountInfo) => {
+        console.log('🏊 Pool account change detected!');
         this.emit('pool', updatedAccountInfo);
       },
       this.connection.commitment,

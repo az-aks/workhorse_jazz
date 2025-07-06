@@ -137,3 +137,27 @@ pnpm-lock.yaml
 
 # Visual Studio Code 
 *.code-workspace
+
+# Solana Bot Specific
+.env
+.env.local
+.env.production
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+bot_output.log
+*.log
+
+# Wallet files (NEVER commit these)
+*.json
+id.json
+devnet-wallet.json
+mainnet-wallet.json
+kp.*.json
+
+# Trading data
+trades/
+logs/
+cache/
+*.cache
